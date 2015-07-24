@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/DO" />
+  <xs:element name="createClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="createClaimobjDO" nillable="true" type="q1:ArrayOfMitchellClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createClaimResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="readClaimobjDO" nillable="true" type="q2:MitchellClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="readClaimResult" nillable="true" type="q3:ArrayOfMitchellClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findClaimByDateRangeOfLossDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findClaimByDateRangeOfLossDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="findClaimByDateRangeOfLossDateResult" nillable="true" type="q4:ArrayOfMitchellClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readSpecificVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="readSpecificVehicleobjDO" nillable="true" type="q5:MitchellClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readSpecificVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="readSpecificVehicleResult" nillable="true" type="q6:ArrayOfVehicleInfoType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="deleteClaimobjDO" nillable="true" type="q7:MitchellClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deleteClaimResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DO" minOccurs="0" name="updateClaimobjDO" nillable="true" type="q8:ArrayOfMitchellClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updateClaimResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

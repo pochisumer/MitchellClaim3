@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/DO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_createClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:createClaim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_createClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_readClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:readClaim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_readClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findClaimByDateRangeOfLossDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:findClaimByDateRangeOfLossDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findClaimByDateRangeOfLossDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findClaimByDateRangeOfLossDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_readSpecificVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:readSpecificVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_readSpecificVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readSpecificVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteClaim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateClaim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateClaimResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="createClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/createClaim" message="tns:IService1_createClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/createClaimResponse" message="tns:IService1_createClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/readClaim" message="tns:IService1_readClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/readClaimResponse" message="tns:IService1_readClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findClaimByDateRangeOfLossDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/findClaimByDateRangeOfLossDate" message="tns:IService1_findClaimByDateRangeOfLossDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/findClaimByDateRangeOfLossDateResponse" message="tns:IService1_findClaimByDateRangeOfLossDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readSpecificVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/readSpecificVehicle" message="tns:IService1_readSpecificVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/readSpecificVehicleResponse" message="tns:IService1_readSpecificVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteClaim" message="tns:IService1_deleteClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteClaimResponse" message="tns:IService1_deleteClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateClaim" message="tns:IService1_updateClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateClaimResponse" message="tns:IService1_updateClaim_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createClaim">
+      <soap:operation soapAction="http://tempuri.org/IService1/createClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readClaim">
+      <soap:operation soapAction="http://tempuri.org/IService1/readClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findClaimByDateRangeOfLossDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/findClaimByDateRangeOfLossDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readSpecificVehicle">
+      <soap:operation soapAction="http://tempuri.org/IService1/readSpecificVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteClaim">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateClaim">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ClaimsService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
